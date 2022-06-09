@@ -6,9 +6,17 @@ To use this, your system (Centos 7) should have below tools installed:
 git  //you can use "yum install git -y" for this
 maven  //you can use "yum install maven -y" for this
 jenkins //follow the installation guideline at https://www.jenkins.io/doc/book/installing/#red-hat-centos
-docker // you can install docker with "yum install -y docker-ce docker-ce-cli containerd.io"
+docker // you can install docker :
 
+ sudo yum install -y yum-utils
+ sudo yum-config-manager \
+    --add-repo \
+    https://download.docker.com/linux/centos/docker-ce.repo
+    
+    
+ sudo yum install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 
+---
 post installing you can fecth the code from github account by clone the repo https://github.com/techlanders/Maven-Project.git
 git clone https://github.com/techlanders/Maven-Project.git
 
